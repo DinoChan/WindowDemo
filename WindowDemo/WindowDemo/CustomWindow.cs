@@ -46,15 +46,15 @@ namespace WindowDemo
     /// </summary>
     public class CustomWindow : Window
     {
-        
+
 
         public CustomWindow()
         {
             DefaultStyleKey = typeof(CustomWindow);
             CommandBindings.Add(new CommandBinding(SystemCommands.CloseWindowCommand, CloseWindow));
-            CommandBindings.Add(new CommandBinding(SystemCommands.MaximizeWindowCommand, MaximizeWindow,CanResizeWindow));
-            CommandBindings.Add(new CommandBinding(SystemCommands.MinimizeWindowCommand, MinimizeWindow,CanMinimizeWindow));
-            CommandBindings.Add(new CommandBinding(SystemCommands.RestoreWindowCommand, RestoreWindow,CanResizeWindow));
+            CommandBindings.Add(new CommandBinding(SystemCommands.MaximizeWindowCommand, MaximizeWindow, CanResizeWindow));
+            CommandBindings.Add(new CommandBinding(SystemCommands.MinimizeWindowCommand, MinimizeWindow, CanMinimizeWindow));
+            CommandBindings.Add(new CommandBinding(SystemCommands.RestoreWindowCommand, RestoreWindow, CanResizeWindow));
             CommandBindings.Add(new CommandBinding(SystemCommands.ShowSystemMenuCommand, ShowSystemMenu));
         }
 
@@ -87,7 +87,7 @@ namespace WindowDemo
         private void CloseWindow(object sender, ExecutedRoutedEventArgs e)
         {
             this.Close();
-            //SystemCommands.CloseWindow(this);
+            SystemCommands.CloseWindow(this);
         }
 
         private void MaximizeWindow(object sender, ExecutedRoutedEventArgs e)
@@ -112,8 +112,8 @@ namespace WindowDemo
             if (element == null)
                 return;
 
-            var point = WindowState == WindowState.Maximized ?new Point(0, element.ActualHeight)
-                :new Point(Left + BorderThickness.Left, element.ActualHeight + Top + BorderThickness.Top);
+            var point = WindowState == WindowState.Maximized ? new Point(0, element.ActualHeight)
+                : new Point(Left + BorderThickness.Left, element.ActualHeight + Top + BorderThickness.Top);
             point = element.TransformToAncestor(this).Transform(point);
             SystemCommands.ShowSystemMenu(this, point);
         }
