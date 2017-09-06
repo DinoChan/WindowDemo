@@ -59,6 +59,8 @@
     <Compile Include="TestWindow.xaml.cs">
       <DependentUpon>TestWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TransitioningContentControl.cs" />
+    <Compile Include="VisualStates.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
