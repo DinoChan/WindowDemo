@@ -22,11 +22,16 @@ namespace WindowDemo
         public TestWindow()
         {
             InitializeComponent();
+            
         }
+        
+       
 
         private void OnTest(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Test");
         }
+
+       
     }
 }

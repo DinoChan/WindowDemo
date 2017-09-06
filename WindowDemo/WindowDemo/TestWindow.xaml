@@ -9,14 +9,13 @@
                     Height="300"
                     Width="300"
                     Icon="Logo.png">
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <StackPanel Margin="0,10">
             <TextBlock Text="Name:" />
-            <TextBox />
             <TextBox />
             <TextBlock TextWrapping="Wrap"
                        Margin="0,10"
@@ -25,7 +24,7 @@
 
                 Theme resources in XAML are a set of resources that apply different values depending on which system theme is active. There are 3 themes that the XAML framework supports: "Light", "Dark", and "HighContrast".
             </TextBlock>
-            <ComboBox />
+            <ComboBox  Margin="10" />
         </StackPanel>
         <Button Grid.Row="1"
                 Content="Test"
