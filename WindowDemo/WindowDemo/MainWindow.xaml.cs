@@ -28,13 +28,15 @@ namespace WindowDemo
             ResizeModeElement.Items.Add(ResizeMode.CanResizeWithGrip);
             ResizeModeElement.Items.Add(ResizeMode.NoResize);
             ResizeModeElement.SelectedIndex = 1;
+
         }
 
         private void OnShowTestWindow(object sender, RoutedEventArgs e)
         {
             var window = new TestWindow();
             window.ResizeMode = (ResizeMode) ResizeModeElement.SelectedItem;
-
+            window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            window.Owner = this;
             window.Show();
         }
     }

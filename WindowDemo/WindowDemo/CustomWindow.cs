@@ -46,8 +46,6 @@ namespace WindowDemo
     /// </summary>
     public class CustomWindow : Window
     {
-
-
         public CustomWindow()
         {
             DefaultStyleKey = typeof(CustomWindow);
@@ -87,7 +85,7 @@ namespace WindowDemo
         private void CloseWindow(object sender, ExecutedRoutedEventArgs e)
         {
             this.Close();
-            SystemCommands.CloseWindow(this);
+            //SystemCommands.CloseWindow(this);
         }
 
         private void MaximizeWindow(object sender, ExecutedRoutedEventArgs e)
@@ -117,7 +115,6 @@ namespace WindowDemo
             point = element.TransformToAncestor(this).Transform(point);
             SystemCommands.ShowSystemMenu(this, point);
         }
-
 
         #endregion
     }
