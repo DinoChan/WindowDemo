@@ -301,7 +301,8 @@
                                                   KeyboardNavigation.TabNavigation="Cycle" />-->
                                 <local:TransitioningContentControl Content="{TemplateBinding Content}"
                                                                    x:Name="MainContentPresenter"
-                                                                 
+                                                                   HorizontalContentAlignment="Stretch"
+                                                                   VerticalContentAlignment="Stretch"
                                                                    KeyboardNavigation.TabNavigation="Cycle" />
                             </AdornerDecorator>
                             <ResizeGrip x:Name="ResizeGrip"
@@ -379,9 +380,9 @@
         <Setter Property="IsTabStop"
                 Value="False" />
         <Setter Property="HorizontalContentAlignment"
-                Value="Stretch" />
+                Value="Left" />
         <Setter Property="VerticalContentAlignment"
-                Value="Stretch" />
+                Value="Top" />
         <Setter Property="Transition"
                 Value="DefaultTransition" />
         <Setter Property="Template">
