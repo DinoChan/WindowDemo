@@ -1,5 +1,8 @@
 # WindowDemo
-简单的自定义Window样式，使用WindowChrome实现。
 
-相关的博客:
+![](https://github.com/DinoChan/WindowDemo/blob/master/38937-20170908103142944-1682110124.png)
+
+A simple Window style with WindowChrome.
+
+Blog:
 [使用WindowChrome自定义Window Style](http://www.cnblogs.com/dino623/p/CustomWindowStyle.html)
