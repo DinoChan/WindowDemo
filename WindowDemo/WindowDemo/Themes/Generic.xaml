@@ -75,7 +75,7 @@
         <Setter Property="Background"
                 Value="#66FFFFFF" />
         <Setter Property="Width"
-                Value="28" />
+                Value="36" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Center" />
         <Setter Property="VerticalContentAlignment"
@@ -298,7 +298,7 @@
                                     Value="Visible" />
                             <Setter TargetName="LayoutRoot"
                                     Property="Margin"
-                                    Value="7" />
+                                    Value="8" />
                         </Trigger>
                         <Trigger Property="WindowState"
                                  Value="Normal">
