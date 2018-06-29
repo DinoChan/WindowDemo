@@ -5,74 +5,50 @@
 
 
     <DataTemplate x:Key="RestoreWhite">
-        <Grid UseLayoutRounding="True"
-              RenderTransform="1,0,0,1,.5,.5">
-            <Path Data="M2,0 L8,0 L8,6 M0,3 L6,3 M0,2 L6,2 L6,8 L0,8 Z"
-                  Width="8"
-                  Height="8"
+        <Grid UseLayoutRounding="True">
+            <Path Data="M1,3 L1,11 L9,11 L9,3 z M3,1 L3,2 L10,2 L10,9 L11,9 L11,1 z M2 ,0 L12,0 L12,10 L10,10 L10,12 L0,12 L0,2 L2 ,2 z"
+                  Width="12"
+                  Height="12"
+                  UseLayoutRounding="True"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  Stroke="White"
-                  StrokeThickness="1" />
+                  Fill="White" />
         </Grid>
     </DataTemplate>
 
     <DataTemplate x:Key="CloseWhite">
-        <Grid Margin="1,0,0,0">
-
-            <Rectangle Stroke="White"
-                       Height="2"
-                       RenderTransformOrigin="0.5,0.5"
-                       Width="11"
-                       UseLayoutRounding="True">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform Angle="45" />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
-            <Rectangle Stroke="White"
-                       Height="2"
-                       RenderTransformOrigin="0.5,0.5"
-                       Width="11"
-                       UseLayoutRounding="True">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform />
-                        <SkewTransform />
-                        <RotateTransform Angle="-45" />
-                        <TranslateTransform />
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
+        <Grid UseLayoutRounding="True">
+            <Path Data="M1,0 L6,5 L11,0 L12,1 L7,6 L12,11 L11,12 L6,7 L1,12 L0,11 L5,6 L0,1 z"
+                  Width="12"
+                  Height="12"
+                  UseLayoutRounding="True"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center"
+                  Fill="White" />
         </Grid>
     </DataTemplate>
 
     <DataTemplate x:Key="MaximizeWhite">
         <Grid>
-            <Path Data="M0,1 L9,1 L9,8 L0,8 Z"
-                  Width="9"
-                  Height="8"
-                  Margin="0,2,0,0"
+            <Path Data="M1,1  L1 ,11 L11,11 L11,1 z M0,0 L12,0 L12,12 L0,12 z"
+                  Width="12"
+                  Height="12"
+                  UseLayoutRounding="True"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  Stroke="White"
-                  StrokeThickness="2" />
+                  Fill="White" />
         </Grid>
     </DataTemplate>
 
     <DataTemplate x:Key="MinimizeWhite">
         <Grid>
-            <Path Data="M0,6 L8,6 Z"
-                  Width="8"
-                  Height="7"
+            <Path Data="M0,5 L12,5 L12,6 L0,6 z"
+                  Width="12"
+                  Height="12"
+                  UseLayoutRounding="True"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  Stroke="White"
-                  StrokeThickness="2" />
+                  Fill="White"  />
         </Grid>
     </DataTemplate>
 
@@ -97,30 +73,21 @@
         <Setter Property="Focusable"
                 Value="False" />
         <Setter Property="Background"
-                Value="Transparent" />
-        <Setter Property="BorderBrush"
-                Value="Transparent" />
-        <Setter Property="BorderThickness"
-                Value="1" />
+                Value="#66FFFFFF" />
+        <Setter Property="Width"
+                Value="28" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Center" />
         <Setter Property="VerticalContentAlignment"
                 Value="Center" />
-        <Setter Property="Padding"
-                Value="1" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid x:Name="LayoutRoot">
+                    <Grid x:Name="LayoutRoot" Background="Transparent">
                         <Rectangle x:Name="ButtonBackground"
-                                   Width="28"
-                                   Height="28"
-                                   Fill="#FFFFFFFF"
+                                   Fill="{TemplateBinding Background}"
                                    Opacity="0" />
                         <Border x:Name="ButtonBorder"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                Background="{TemplateBinding Background}"
                                 SnapsToDevicePixels="true">
                             <ContentPresenter x:Name="TitleBarButtonContentPresenter"
                                               Focusable="False"
@@ -136,13 +103,13 @@
                         <Trigger Property="IsMouseOver"
                                  Value="true">
                             <Setter Property="Opacity"
-                                    Value="0.2"
+                                    Value="1"
                                     TargetName="ButtonBackground" />
                         </Trigger>
                         <Trigger Property="IsPressed"
                                  Value="True">
                             <Setter Property="Opacity"
-                                    Value="0.4"
+                                    Value="0.6"
                                     TargetName="ButtonBackground" />
                         </Trigger>
                         <Trigger Property="IsEnabled"
@@ -203,8 +170,6 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:CustomWindow}">
-
-
                     <Border BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             x:Name="WindowBorder">
@@ -259,10 +224,11 @@
                                 <StackPanel x:Name="WindowCommandButtonsStackPanel"
                                             Grid.Column="1"
                                             HorizontalAlignment="Right"
-                                            VerticalAlignment="Top"
+                                            VerticalAlignment="Stretch"
                                             Background="Transparent"
                                             Orientation="Horizontal"
-                                            WindowChrome.IsHitTestVisibleInChrome="True">
+                                            WindowChrome.IsHitTestVisibleInChrome="True"
+                                            Margin="0,-1,-1,0">
                                     <Button x:Name="Minimize"
                                             ToolTip="Minimize"
                                             WindowChrome.IsHitTestVisibleInChrome="True"
@@ -289,6 +255,7 @@
                                     </Grid>
                                     <Button x:Name="Close"
                                             ToolTip="Close"
+                                            Background="Red"
                                             WindowChrome.IsHitTestVisibleInChrome="True"
                                             Command="{Binding Source={x:Static SystemCommands.CloseWindowCommand}}"
                                             ContentTemplate="{StaticResource CloseWhite}"
