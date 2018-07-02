@@ -299,7 +299,7 @@
                                     Value="Visible" />
                             <Setter TargetName="LayoutRoot"
                                     Property="Margin"
-                                    Value="8" />
+                                    Value="7" />
                         </Trigger>
                         <Trigger Property="WindowState"
                                  Value="Normal">
