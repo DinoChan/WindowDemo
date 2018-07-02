@@ -48,7 +48,7 @@
                   UseLayoutRounding="True"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
-                  Fill="White"  />
+                  Fill="White" />
         </Grid>
     </DataTemplate>
 
@@ -83,7 +83,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Grid x:Name="LayoutRoot" Background="Transparent">
+                    <Grid x:Name="LayoutRoot"
+                          Background="Transparent">
                         <Rectangle x:Name="ButtonBackground"
                                    Fill="{TemplateBinding Background}"
                                    Opacity="0" />
@@ -263,13 +264,13 @@
                                             IsTabStop="False" />
                                 </StackPanel>
                             </Grid>
-                            <AdornerDecorator Grid.Row="1" KeyboardNavigation.IsTabStop="False">
+                            <AdornerDecorator Grid.Row="1"
+                                              KeyboardNavigation.IsTabStop="False">
                                 <!--<ContentPresenter x:Name="MainContentPresenter"
                                                   KeyboardNavigation.TabNavigation="Cycle" />-->
-                                <local:TransitioningContentControl Content="{TemplateBinding Content}"
-                                                                   x:Name="MainContentPresenter"
-                                                                
-                                                                   KeyboardNavigation.TabNavigation="Cycle" />
+                                    <local:TransitioningContentControl Content="{TemplateBinding Content}"
+                                                                       x:Name="MainContentPresenter"
+                                                                       KeyboardNavigation.TabNavigation="Cycle" />
                             </AdornerDecorator>
                             <ResizeGrip x:Name="ResizeGrip"
                                         HorizontalAlignment="Right"

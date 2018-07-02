@@ -39,10 +39,5 @@ namespace WindowDemo
             window.Owner = this;
             window.Show();
         }
-
-        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-
-        }
     }
 }

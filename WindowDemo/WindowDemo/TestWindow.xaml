@@ -5,11 +5,11 @@
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:local="clr-namespace:WindowDemo"
                     mc:Ignorable="d"
-                    Title="TestWindow"
-                    Height="300"
-                    Width="300"
+                    Title="TestWindow" 
+                   SizeToContent="WidthAndHeight"
+                    UseLayoutRounding="True"
                     Icon="Logo.png">
-    <Grid >
+    <Grid Height="100" Width="100">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="Auto" />
