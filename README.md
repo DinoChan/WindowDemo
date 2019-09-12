@@ -1,4 +1,4 @@
-已在[Kino.Toolkit.Wpf](https://github.com/DinoChan/Kino.Toolkit.Wpf)创建了个全新的自定义窗体，以下是相关博客：
+已在[Kino.Toolkit.Wpf](https://github.com/DinoChan/Kino.Toolkit.Wpf)创建了一个全新的自定义Window，以下是相关博客：
 
 [Window(窗体)的UI元素及行为](https://www.cnblogs.com/dino623/p/uielements_of_window.html)
 
